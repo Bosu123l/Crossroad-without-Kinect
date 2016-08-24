@@ -1,0 +1,1322 @@
+﻿<Window x:Class="TrafficLigths.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:TrafficLigths"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainWindow"
+        Width="800"
+        Height="721"
+        mc:Ignorable="d" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="carFromLeftToRight">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromLeftToRigth">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-336.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-307.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-276.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-246.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-215.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-186.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-152"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-120"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-86.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-54.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-22"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="41.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="73.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="105.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="136"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="167.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="198"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="228.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="260"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="292"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="321.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="349.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="380.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="411.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="444"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="478.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="508.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="538.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="569.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="601.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="634.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="668.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="700"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="730.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="763.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="795.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="829"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="861"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="886.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="889.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="-324"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="-334.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromLeftToRigth">
+                <EasingDoubleKeyFrame KeyTime="0" Value="119.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="120"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="122"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="121.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="120.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="121.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="122"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="121.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="122"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="123.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="124.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="125.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="123.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="124.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="126"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="125.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="122.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="124.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="123.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="125.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="122.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="121.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="122.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="121.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="122.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="120.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="121.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="122.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="121.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="122.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="122.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="121.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="120.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="120.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="121.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="121.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="575.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="551.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="118.002"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromRIgthToLeft">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromRigthToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="137.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="109.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="78.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="44.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="11.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-20.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-53.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-84.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-114.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-146.916"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-178.916"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-211.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-242.916"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-274.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-305.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-338.416"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-371.416"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-404.083"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-435.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-468.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-503.417"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-537.75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-570.083"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-605.416"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-639.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-674.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-708.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-742.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-775.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-811.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-844.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-879.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-915.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-950.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-985.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-972"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="142.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="139.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromRigthToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-2.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-0.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="2.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.918"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.418"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1.418"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="1.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="2.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="2.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="2.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="3.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="2.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="3.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="3.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="3.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="3.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="3.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="4.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="4.916"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="4.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="4.916"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="5.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="6.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="6.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="5.917"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="6.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="7.583"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-416.917"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-410.917"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-4.417"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromRigthToUp">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromRigthToUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="119"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="91.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="63.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="35"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-23.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-58.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-86.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-117"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-148.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-177"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-205.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-232.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-263"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-296"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-324"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-346"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-361"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-374"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-382.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-383"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-383.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-384.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-385.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-386.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-388.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-389.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-390.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-391.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-392.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="141.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="137.833"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromRigthToUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="2.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="2.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-5.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-16"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-30.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-73.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-100"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-127"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-155.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-186"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-217.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-246.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-274.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-301.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-329.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-360.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-387.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-415.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-447.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="2.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromRigthToUp">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="16"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="28"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="36"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="49"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="72"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="87"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromLeftToUp">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromLeftToUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-105.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-73.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-42.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-11.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="12.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="51.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="86"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="119.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="152.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="186"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="219.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="252.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="287.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="320.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="354"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="388.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="417.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="448.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="474.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="504.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="531.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="555.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="576.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="591.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="598.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="601.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="596.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="592.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="587.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="584.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="584.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="583.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="582.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="581.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="582.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="582.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="582.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="580.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="578.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="-177.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="-127.001"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromLeftToUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-1.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-0.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-0.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="1.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="2.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="3.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="2.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="2.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="1.998"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-0.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-7.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-13.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-29.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-45.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-67.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-94.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-126.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-159.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-192.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-224.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-253.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-286.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-317.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-350.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-379.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-412.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-443.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-475.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-507.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-537.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="-563.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="-547.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="0.331"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromLeftToUp">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-11"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-19"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-26"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-36"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-48"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-65"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-81"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-94"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-94"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromRightToDown">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromRigthToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="163.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="133.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="102.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="70.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="38.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="6.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-24.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-58.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-92"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-126"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-156.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-188.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-224"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-252.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-284.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-318.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-353.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-386.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-418.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-451.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-482.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-506.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-523.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-532.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-535.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-534.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-535.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-534.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-533.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-533.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-533.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-532.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-533.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-534.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-534.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-534.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-535.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-534.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="207.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="171.167"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromRigthToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="4.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="4.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="30"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="56"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="82"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="113.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="149.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="179.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="214.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="248.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="283"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="314"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="346"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="378.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="411.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="446"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="478.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="512.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="546"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="558"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromRigthToDown">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-24"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-45"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-63"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-77"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-89"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromLeftToDown">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromLeftToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-155.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-118.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-81.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-47.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-11.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="23.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="53.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="90.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="123.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="160.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="194.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="230.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="264.669"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="301.336"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="339.336"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="370.003"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="396.003"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="416.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="424.003"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="426.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="428.003"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="427.336"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="428.003"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="428.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="430.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="432.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="433.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="434.67"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-145.33"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-183.33"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromLeftToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-2.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-3.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-4.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-2.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-4.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-4.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-4.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-6.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-8.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-6.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-4.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="9.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="23.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="37.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="59.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="89.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="118.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="157.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="190.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="225.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="259.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="295.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="332.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="369.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="404.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="439.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="422.665"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="4.665"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromLeftToDown">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-180"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-175"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-170"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-163"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-157"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-146"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-133"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-117"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-100"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-180"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromDownToUp">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromDownToUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="121.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="88"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="56"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="25.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-30"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-64"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-92.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-125"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-154.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-187"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-218"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-248.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-278"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-308.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-340"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-371.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-402"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-431.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-464"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-494"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-523.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-553.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-583.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-616.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-647.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-681.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-713.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-747.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-777.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-805.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-835.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-868.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-897.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-951.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-925.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="60.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="124.834"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromDownToUp">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-3.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-3.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-4.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-5.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-4.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-4.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-5.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-4.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-5.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-6.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-6.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-6.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-7.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-10"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-12"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="692"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="730"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="4"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromDownToLeft">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromDownToLeft">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-0.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-0.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-0.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-1.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-3.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-8.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-12.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-31.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-63.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-99.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-137.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-175.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-216.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-253.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-290.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-332.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-369.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-408.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-446.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-483.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-522.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-562.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-602.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-645.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-683.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-723.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-715.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="2.167"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromDownToLeft">
+                <EasingDoubleKeyFrame KeyTime="0" Value="131.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="93.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="58.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="21.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-7.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-39.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-77.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-115.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-150.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-188.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-225.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-261.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-294.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-331.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-368.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-405.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-442.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-469.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-489.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-494.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-496.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-495.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-496.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-495.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-495.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-494.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-494.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-495.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-494.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-493.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-492.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-493.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-493.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-492.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-491.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="-492.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="93.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="129.499"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromDownToLeft">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="80"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="62"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="44"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="22"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="90"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromDownToRight">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromDownToRigth">
+                <EasingDoubleKeyFrame KeyTime="0" Value="133"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="99"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="63.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="22.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-11.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-44.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-81.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-117.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-153.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-188.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-225.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-257.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-291.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-324.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-351.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-364.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-372.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-376.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-376.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-378.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-377.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-375.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-374.832"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-374.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-373.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-374.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-373.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-374.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-374.832"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="105.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="133.668"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromDownToRigth">
+                <EasingDoubleKeyFrame KeyTime="0" Value="5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="4.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-0.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-0.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-3.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-5.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="1.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="12"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="26.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="50"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="79.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="113.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="148"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="183.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="216.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="253.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="292"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="332.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="373.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="411.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="450.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="488.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="523.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="559.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="617.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="2.834"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromDownToRigth">
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-83"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-69"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-56"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-39"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-20"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-90"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromUpToDown">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromUpToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-155.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-124"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-92.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-60"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-31.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="36.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="73.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="105.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="137.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="169.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="201.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="233.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="267.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="299.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="330.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="363.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="397.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="431.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="467.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="501.835"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="537.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="570.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="603.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="637.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="667.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="700.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="734.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="769.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="803.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="838.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="873.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="906.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="940.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="974.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="1013.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="1031.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-204.332"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="-168.332"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromUpToDown">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-3"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-1.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-2.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-1.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-0.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="1.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="0.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-0.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="0.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-0.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-0.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="1.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="0.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="1.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.668"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0.335"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="1.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="1.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="1.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-0.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="0.002"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-0.998"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-0.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-1.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-0.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-0.998"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="0.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="1.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="4.502"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="-661.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="-715.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="-1.498"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromUpToRight">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromUpToRigth">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-159"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-125"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-91"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-59"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-26"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="44.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="79"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="109"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="141.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="176.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="209.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="238.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="272.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="305.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="337"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="371"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="371"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="404.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="437"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="468"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="491.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="503"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="513.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="515.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="517.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="518"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="519"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="519.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="520.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="521"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="520"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="521.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="521"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="521.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="521.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="521.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="522.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="523.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="524.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="523"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="523.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="-83.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="-170.833"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromUpToRigth">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-7.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-7.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-7"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-7.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="-8.334"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-9.667"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-9"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-10.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-11.666"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-10.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-10.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-12.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-5.999"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="5.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="24.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="51.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="84.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="115.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="147.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="178.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="211.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="244.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="277.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="310.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="343.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="374.001"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="408.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="442.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.5" Value="476.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.6" Value="511.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.7" Value="546.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.8" Value="579.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.9" Value="614.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4" Value="648.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="682.835"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="703.835"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.3" Value="-7.165"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromUpToRigth">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="82"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="72"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="62"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="51"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="31"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="14"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.2" Value="90"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="CarFromUpToLeft">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="CarFromUpToLeft">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-1.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-4.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-3.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-4.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-3.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-1.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="-1.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-1.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-0.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="-1.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-0.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-1.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-1.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-7.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-14.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-25.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-42.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-67.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-93.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-122.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="-156.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="-187.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-220.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="-252.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-283.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="-316.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="-349.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-379.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="-407.167"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-439.834"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="-472.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="-504.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-487.501"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-1.501"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="CarFromUpToLeft">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-169.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-142.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-108.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="-73.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-37.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-4.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="28.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="62.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="96.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.9" Value="130.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="162.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="197.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="230.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="230.833"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="266.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="297.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="328.832"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="356.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="380.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="399.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="407.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="409.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.2" Value="411.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="413.498"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="412.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="414.832"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.6" Value="415.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="416.166"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="413.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="415.499"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="414.832"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.1" Value="416.165"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="418.832"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-65.168"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.4" Value="-172.168"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="CarFromUpToLeft">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="-90"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.3" Value="-83"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.5" Value="-63"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="-56"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.7" Value="-56"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.8" Value="-41"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="-25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-6"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.2" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3.3" Value="-90"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard x:Name="carFromLeftToRight_BeginStoryboard" Storyboard="{StaticResource carFromLeftToRight}"/>
+            <BeginStoryboard x:Name="CarFromRIgthToLeft_BeginStoryboard"  Storyboard="{StaticResource CarFromRIgthToLeft}"/>
+            <BeginStoryboard x:Name="CarFromRigthToUp_BeginStoryboard"  Storyboard="{StaticResource CarFromRigthToUp}"/>
+            <BeginStoryboard x:Name="CarFromLeftToUp_BeginStoryboard"  Storyboard="{StaticResource CarFromLeftToUp}"/>
+            <BeginStoryboard x:Name="CarFromRightToDown_BeginStoryboard"  Storyboard="{StaticResource CarFromRightToDown}"/>
+            <BeginStoryboard x:Name="CarFromLeftToDown_BeginStoryboard"  Storyboard="{StaticResource CarFromLeftToDown}"/>
+            <BeginStoryboard x:Name="CarFromDownToUp_BeginStoryboard"  Storyboard="{StaticResource CarFromDownToUp}"/>
+            <BeginStoryboard x:Name="CarFromDownToLeft_BeginStoryboard"  Storyboard="{StaticResource CarFromDownToLeft}"/>
+            <BeginStoryboard x:Name="CarFromDownToRight_BeginStoryboard"  Storyboard="{StaticResource CarFromDownToRight}"/>
+            <BeginStoryboard x:Name="CarFromUpToDown_BeginStoryboard"  Storyboard="{StaticResource CarFromUpToDown}"/>
+            <BeginStoryboard x:Name="CarFromUpToRight_BeginStoryboard"  Storyboard="{StaticResource CarFromUpToRight}"/>
+            <BeginStoryboard x:Name="CarFromUpToLeft_BeginStoryboard"  Storyboard="{StaticResource CarFromUpToLeft}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/CrossImage.jpg" />
+        </Grid.Background>
+        <local:LightView x:Name="LightViewHorizontal1"
+                         Margin="50,10,10,10"
+                         RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120" Height="212">
+            <local:LightView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="90" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </local:LightView.RenderTransform>
+        </local:LightView>
+        <local:LightView x:Name="LightViewVertical1" Margin="10" VerticalAlignment="Top" HorizontalAlignment="Left" Width="250" />
+        <Button x:Name="button"
+                Width="151"
+                Height="36"
+                Margin="68,0,0,45"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Click="button_Click"
+                Content="Change State" />
+        <Button x:Name="straight" Content="Straight" Margin="101,651,0,10" HorizontalAlignment="Left" Width="73" Click="straight_Click"/>
+        <Button x:Name="AllowLeft" Content="Left" Margin="10,651,0,10" Click="AllowLeft_Click" HorizontalAlignment="Left" Width="73"/>
+        <Button x:Name="AllowRigth" Content="Rigth" Margin="187,650,0,11" Click="AllowRigth_Click" HorizontalAlignment="Left" Width="73"/>
+        <local:LightView x:Name="LightViewVertical2" Margin="50,10,10,10" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="160" Height="199" />
+        <local:LightView x:Name="LightViewHorizontal2"
+                         Width="151"
+                         Height="220"
+                         Margin="50,10,10,10"
+                         RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" HorizontalAlignment="Right">
+            <local:LightView.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="270" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </local:LightView.RenderTransform>
+        </local:LightView>
+        <Grid x:Name="CarFromLeftToRigth" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="111" Margin="30,259,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromRightToLeft" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Height="58" VerticalAlignment="Top" Width="106.5" Margin="0,259,-111,0">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla zielony.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromRigthToUp" HorizontalAlignment="Right" Height="58" VerticalAlignment="Top" Width="106.5" Margin="0,259,-111,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla niebieski.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromLeftToUp" HorizontalAlignment="Left" Height="60" VerticalAlignment="Bottom" Width="111" Margin="-162,0,0,255.667" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla zolty.png"/>
+            </Grid.Background>
+
+
+        </Grid>
+        <Grid x:Name="CarFromRigthToDown" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Height="60" VerticalAlignment="Top" Width="112.5" Margin="0,259,-111,0">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla fiolet.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromLeftToDown" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="64" VerticalAlignment="Bottom" Width="120" Margin="-162,0,0,254">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-180"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla niebieski.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromDownToUp" Height="57" VerticalAlignment="Bottom" Margin="0,0,265,-112"
+              HorizontalAlignment="Right" Width="111" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="90" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla zielony.png" />
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromDownToLeft" HorizontalAlignment="Right" Height="60" VerticalAlignment="Bottom" Width="126" Margin="0,0,260,-116.333" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla fiolet.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromDownToRigth" HorizontalAlignment="Right" Height="60" VerticalAlignment="Bottom" Width="126" Margin="0,0,259.5,-113.833" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromUpToDown" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="108" Margin="270,-140,0,0">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla zielony.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromUpToRigth" HorizontalAlignment="Left" Height="60" VerticalAlignment="Top" Width="111" Margin="269,-142.667,0,0" RenderTransformOrigin="0.5,0.5">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla zolty.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <Grid x:Name="CarFromUpToLeft" Height="62.5" VerticalAlignment="Top" Margin="268,-143.5,0,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Width="111">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Grid.Background>
+                <ImageBrush ImageSource="Images/audi bez tla niebieski.png"/>
+            </Grid.Background>
+
+        </Grid>
+        <local:PolicemanView HorizontalAlignment="Left" Margin="250,233,0,0" VerticalAlignment="Top" x:Name="policemanView" RenderTransformOrigin="0.5,0.5" Width="269"/>
+    </Grid>
+</Window>
